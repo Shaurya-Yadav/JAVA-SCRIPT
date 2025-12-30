@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functioning Bag</title>
+    <link rel="stylesheet" href="bag.css">
+</head>
+<body>
+        <button class="bag" onclick=" Quantity += 1; document.querySelector('#cart-summary').innerText = `Your Bag has ${Quantity} items`;">Add to Bag</button>
+
+        <button class="wish" onclick="Quantity -= 1; document.querySelector('#cart-summary').innerText = `Your Bag has ${Quantity} items`;">move to Wishlist</button>
+
+        <button class="bag" onclick="Quantity += 2; document.querySelector('#cart-summary').innerText = `Your Bag has ${Quantity} items`;">Add 1 + 1 sale item</button>
+
+        <h2 id="cart-summary"></h2>
+
+        <script>
+            let Quantity = 0;
+            document.querySelector('#cart-summary').innerText = `Your Bag has ${Quantity} items`;
+        </script>
+</body>
+</html>

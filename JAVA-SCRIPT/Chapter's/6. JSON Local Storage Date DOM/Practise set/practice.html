@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice Exercise</title>
+    <style>
+        .button{
+            height: 40px;
+            width: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .even{
+            background-color: thistle;
+        }
+        .odd{
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="greet"></h2>
+    <button class="button" onclick="pressed();"></button>
+
+    <script>
+        let noOfTimesClick = localStorage.getItem('noOfTimesClick') || 0;
+
+        function pressed(){
+            noOfTimesClick++;
+            localStorage.setItem('noOfTimesClick',noOfTimesClick);
+            updateBtn();
+        }
+        function updateBtn(){  
+             let button = document.querySelector('.button');
+            if(noOfTimesClick % 2 ===0){
+                button.classList.remove('odd');
+                button.classList.add('even');
+            }
+            else{
+                button.classList.remove('even');
+                button.classList.add('odd');
+            }
+
+            button.innerText = noOfTimesClick;
+
+        }
+        updateBtn();
+
+
+        function Greeting(Name = 'bbu🧸'){
+        let date = new Date();
+        let hours = date.getHours();
+        let heading = document.querySelector('.greet');
+
+        if(hours >= 4 && hours <12){
+            heading.innerText = `Good Morning ${Name}`;
+        }
+        else if(hours >= 12 && hours < 17){
+            heading.innerText = `Good AfterNoon ${Name}`;
+        }
+        else{
+            heading.innerText = `Good Night ${Name}`;
+        }
+  }
+  Greeting('Shtruth');
+    </script>
+</body>
+</html>

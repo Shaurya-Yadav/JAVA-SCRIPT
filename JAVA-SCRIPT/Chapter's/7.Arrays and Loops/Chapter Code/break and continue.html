@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Break and Continue Statements</title>
+</head>
+<body>
+    <script>
+        for(let i=0; i<50; i++){
+            console.log(i);
+            if(i === 25){
+                break;
+            }
+        }
+
+        let arr = [2,4,3,6,8,5,9];
+        for(let i=0; i< arr.length; i++){
+            if(arr[i] === 6){
+                console.log(`Number here $[i]`);
+                break;
+            }
+            console.log('see here');
+        }
+
+        console.log(`let's cheak Continue statem`);
+
+        for(let i = 1; i<=25; i++){
+            if(i % 2 == 0){
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

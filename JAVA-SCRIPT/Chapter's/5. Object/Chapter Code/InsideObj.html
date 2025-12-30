@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inside Object</title>
+</head>
+<body>
+    <script>
+        let product = {
+            company : 'Shtruth',
+            itemName : 'A-shirt',
+            price : 1399,
+            displayPrice : function(){
+                console.log(`Price of the product is ₹${this.price}`)
+            }
+        };
+        product.displayPrice();
+    </script>
+</body>
+</html>

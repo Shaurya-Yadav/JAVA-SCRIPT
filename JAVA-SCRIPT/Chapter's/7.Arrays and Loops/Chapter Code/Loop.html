@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        let num = 0; //initialization
+        while(num <=10){ //condition
+            console.log(num);
+            num++; //updation
+        }
+        console.log(`where the loop is end= `+ num);
+
+        console.log('Now cheak do,while loop....');
+        let num2 = 0; //initialization
+        do{
+            console.log(num2);
+            num2++;  //updation
+        }while(num2 <= 5); //condition
+
+        console.log('Now cheak for loop....');
+        for(let x=0; x<=7; x++){
+            console.log(x);
+        }
+
+        console.log(`Array with for loop`);
+
+        let arr = [2,4,12,5,8,9];
+        for(let i=0; i< arr.length; i++){
+            console.log(arr[i]);
+        }
+    </script>
+</body>
+</html>

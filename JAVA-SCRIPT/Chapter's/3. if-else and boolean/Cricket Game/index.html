@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Shtruth Cricket Game💜 </h1>
+
+    <button onclick="
+    let randNum = Math.random() * 3;
+    let ComChoice;
+    if(randNum > 0 && randNum <= 1){
+        ComChoice = 'Bat';
+        // console.log('Computer choice is Bat');
+    }
+    else if(randNum > 1 && randNum <= 2){
+        ComChoice = 'Ball';
+        // console.log('Computer Choice is Ball');
+    }
+    else{
+        ComChoice = 'Stump';
+        // console.log('Computer Choice is Stump');
+    }
+
+    let resultMsg;
+    if(ComChoice === 'Ball'){
+        resultMsg ='You Won';
+    }
+    else if(ComChoice === 'Bat'){
+        resultMsg = `It's a Tie`;
+    }
+    else if(ComChoice === 'Stump'){
+        resultMsg = `Computer has Won`;
+    }
+    alert(`You have choosen Bat .  Computer Choice is ${ComChoice} and ${resultMsg}`);
+    
+    " >Bat 🏏</button>
+
+    <button onclick="
+    randNum = Math.random() * 3;
+    if(randNum > 0 && randNum <= 1){
+        ComChoice = 'Bat';
+        // console.log('Computer choice is Bat');
+    }
+    else if(randNum > 1 && randNum <= 2){
+        ComChoice = 'Ball';
+        // console.log('Computer Choice is Ball');
+    }
+    else{
+        ComChoice = 'Stump';
+        // console.log('Computer Choice is Stump');
+    }
+
+
+    if(ComChoice === 'Ball'){
+        resultMsg = `It's a Tie`;
+    }
+    else if(ComChoice === 'Bat'){
+        resultMsg = `Computer has Won`;
+    }
+    else if(ComChoice === 'Stump'){
+        resultMsg = 'You Won';
+    }
+    alert(`You have choosen Ball .  Computer Choice is ${ComChoice} and ${resultMsg}`);
+    " >Ball 🔴</button>
+
+    <button onclick="
+    randNum = Math.random() * 3;
+    if(randNum > 0 && randNum <= 1){
+        ComChoice = 'Bat';
+        // console.log('Computer choice is Bat');
+    }
+    else if(randNum > 1 && randNum <= 2){
+        ComChoice = 'Ball';
+        // console.log('Computer Choice is Ball');
+    }
+    else{
+        ComChoice = 'Stump';
+        // console.log('Computer Choice is Stump');
+    }
+
+
+    if(ComChoice === 'Ball'){
+        resultMsg = `Computer has Won`;
+    }
+    else if(ComChoice === 'Bat'){
+        resultMsg = 'You Won';
+    }
+    else if(ComChoice === 'Stump'){
+        resultMsg = `It's a Tie`;
+    }
+    alert(`You have choosen Stump .  Computer Choice is ${ComChoice} and ${resultMsg}`);
+    " >Stump🥢</button>
+</body>
+</html>

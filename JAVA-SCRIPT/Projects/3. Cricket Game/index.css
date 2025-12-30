@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    color: rgb(52, 7, 7);
+}
+button{
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(202, 213, 252);
+}
+.choice-btn{
+    height: 100px;
+    width: 100px;
+    border: none;
+    margin: 10px;
+    background-color: rgb(148, 201, 220);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.choice_img{
+    height:75px;
+}
+.delete-btn{
+    border: none;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(148, 218, 177);
+    cursor: pointer;
+}

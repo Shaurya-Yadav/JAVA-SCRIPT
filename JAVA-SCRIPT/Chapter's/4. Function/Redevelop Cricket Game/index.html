@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Shtruth Cricket Game🏏👕</h1>
+
+    <button onclick="
+     let ComChoice = generateComChoice();
+
+    let resultMsg = getResult('Bat' , ComChoice);
+    showResult('Bat', ComChoice, resultMsg);
+    " >Bat 🏏</button>
+
+    <button onclick="
+     ComChoice = generateComChoice();
+
+    resultMsg = getResult('Ball' , ComChoice);
+
+    showResult('Ball', ComChoice, resultMsg);
+    " >Ball 🥎</button>
+
+    <button onclick="
+     ComChoice = generateComChoice();
+
+    resultMsg = getResult('Stump' , ComChoice);
+
+    showResult('Stump', ComChoice, resultMsg);
+    " >Stump🥢</button>
+
+
+    <script>
+       function generateComChoice(){
+        let randNum = Math.random() * 3;
+       if(randNum > 0 && randNum <= 1){
+        return 'Bat';
+       }
+       else if(randNum > 1 && randNum <= 2){
+        return 'Ball';
+       }
+        else{
+        return 'Stump';
+       }
+      }
+      function getResult(user , computer){
+        if(user === 'Bat'){
+      if(computer === 'Ball'){
+          return 'You Won';
+        }
+        else if(computer === 'Bat'){
+           return `It's a Tie`;
+        }
+        else if(computer === 'Stump'){
+            return `Computer has Won`;
+        }
+            }
+
+        else if(user === 'Ball'){
+     if(computer === 'Ball'){
+         return `It's a Tie`;
+        }
+        else if(computer === 'Bat'){
+           return `Computer has Won`;
+        }
+        else if(computer === 'Stump'){
+            return 'You Won';
+        }
+        }
+        else{
+        if(computer === 'Ball'){
+           return `Computer has Won`;
+        }
+        else if(computer === 'Bat'){
+            return 'You Won';
+        }
+        else if(computer === 'Stump'){
+            return `It's a Tie`;
+        }
+        }
+        }
+        function showResult(user , computer , result){
+         alert(`You have choosen ${user} .  Computer Choice is ${computer} and ${result}`);
+        }
+        
+    </script>
+</body>
+</html>
